@@ -52,7 +52,7 @@ def train(pokemon: Pokemon):
         if win:
             pokemon.inc_exp(step_size)
 
-#Задание 1: задача ДЗ
+#Задание 2: задача ДЗ
 class JsonToObj(dict):
     """
     Наследуемся от dict и рекурсивно "переводим" ключи словаря в атрибуты
