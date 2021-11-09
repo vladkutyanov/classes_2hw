@@ -72,6 +72,7 @@ class ColorizeMixin:
     Меняем цвет вывода миксином
     """
     def __repr__(self):
+        self.repr_color_code = 33
         return f'\033[1;{self.repr_color_code};40m {self.title} | {self.price} ₽'
 
 
@@ -88,7 +89,6 @@ class Advert(ColorizeMixin, JsonToObj):
         super(Advert, self).__init__(data)
 
     def __repr__(self):
-        self.repr_color_code = 33
         return ColorizeMixin.__repr__(self)
 
 
